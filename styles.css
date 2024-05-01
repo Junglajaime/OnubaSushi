@@ -3,37 +3,241 @@
     position: relative; 
 }
 
-.nav-item::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.nav-item:hover::before {
+.nav-item:hover {
     opacity: 1;
 }
 
 
-/*Navigation bar*/
-
+/*Footer*/
 .social-media img {
-    width: 40px; /* Ajusta el tamaño de los iconos según tus preferencias */
-    height: auto; /* Mantén la proporción de aspecto */
+    width: 40px; 
+    height: auto; 
 }
 
 .social-media {
     display: flex;
-    justify-content: flex-end; /* Alinea los elementos al final del contenedor */
-    gap: 10px; /* Agrega un espacio entre los elementos */
-    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: flex-end; 
+    gap: 10px; 
+    align-items: center; 
 }
 
 .social-media p {
     margin-right: 10px; /* Añade un margen derecho al texto */
 }
+
+.nav-link {
+    padding: 10px 15px; /* Ajusta los valores según sea necesario */
+}
+
+.footer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Product*/
+.producto {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .producto .imagen {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-img-top{
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .producto .card-body {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+  }
+  
+  .producto:hover .card-body {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .producto .card-title, .producto .precio {
+    margin: 0;
+    color: #000;
+  }
+  
+  .producto:hover .card-title, .producto:hover .precio {
+    color: #fff;
+  }
+  
+  .producto .descripcion {
+    display: none;
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  .producto:hover .descripcion {
+    display: block;
+  }
+
+  .tarjeta-rest{
+    background-repeat: no-repeat;
+    height: 400px;
+    border-radius: 6px;
+    padding: 1rem .5rem;
+    display: flex;
+    align-items: end;
+  }
+  
+  .tarjeta-rest {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-rest:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-img {
+    background-repeat: no-repeat;
+    height: 400px;
+    border-radius: 6px;
+    padding: 1rem .5rem;
+    display: flex;
+    align-items: end;
+}
+
+
+/* Estilos para las tarjetas de platos */
+.tarjeta-plato {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-plato:hover {
+    transform: scale(1.05);
+}
+
+.imagen-plato {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.contenido-plato {
+    padding: 20px;
+}
+
+.tarjeta-plato h3 {
+    margin-top: 0;
+}
+
+.tarjeta-plato .precio {
+    font-weight: bold;
+    color: #333;
+}
+
+.tarjeta-plato .descripcion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.tarjeta-plato:hover .descripcion {
+    opacity: 1;
+}
+
+
+/*Ofert Container*/
+.ofertas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.ofertas-content {
+    display: flex;
+    
+}
+
+.ofertas-text {
+    flex: 1;
+}
+
+.parrafo-container {
+   text-align: start;
+}
+
+.gif-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gif-container img {
+    max-width: 50%;
+    align-self: flex-end;
+}
+.ofertas-content {
+    display: flex;
+    align-items: center; 
+}
+
+.ofertas-text {
+    flex: 1;
+}
+
+#ofertas p {
+    padding-bottom: 50px;
+}
+
+
+  /*Mediaqueries*/
+  @media (max-width:1200px){
+    .column-4{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+  
+  @media (max-width:880px){
+    .column-4{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  
+  @media (max-width:640px){
+    .column-4{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+
+  
+ 
+
+
+
+  
 

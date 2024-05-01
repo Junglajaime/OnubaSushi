@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <title>ONUBA SUSHI - Restaurante de comida japonesa</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animate.css">
-    
-</head>
-<body>
-    <script src="animate.js"></script>
+
     <header class="bg-dark text-white py-4 ">
         <div class="container">
             <div class="row align-items-left"> 
                 <div id="animated-svg">
-                    <svg class="logo" width="150" height="171" viewBox="0 0 150 171" fill="none">
+                    <svg class="logo" width="150" height="171" viewBox="0 0 150 171" fill="none" onclick="window.location.reload()">
                         <g id="Clip path group">
                         <mask id="mask0_1_111" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="150" height="171">
                         <g id="clip0_1_2">
@@ -86,7 +84,10 @@
             </div>
         </div>
     </header>
-
+    
+</head>
+<body>
+    <script src="animate.js"></script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,131 +115,302 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link special-offers" href="#ofertas">Ofertas Especiales</a>
-                    </li>
+                    <!--</li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container py-5">
+    
         <section id="sopas" class="menu-section">
             <h2 class="mb-4">Sopas y Ramen</h2>
-            <!-- Contenido de Sopas y Ramen -->
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Ramen Tradicional</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/ramen.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Ramen Tradicional</h3>
+                            <span class="precio">10€</span>
+                            <p class="descripcion">Deliciosa sopa de fideos japonesa.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Sopa Miso</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/sopa_miso.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Sopa Miso</h3>
+                            <span class="precio">7€</span>
+                            <p class="descripcion">Caldo japonés fermentado a base de soja.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Udon al Curry</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/udon_al_curry.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Udon al Curry</h3>
+                            <span class="precio">9€</span>
+                            <p class="descripcion">Fideos gruesos japoneses en una deliciosa salsa de curry.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="sushi" class="menu-section">
             <h2 class="mb-4">Sushi</h2>
-            <!-- Contenido de Sushi -->
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Nigiri de Salmón</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/sushi_salmon.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Sushi Roll de Salmón</h3>
+                            <span class="precio">12€</span>
+                            <p class="descripcion">Rollos de sushi rellenos de salmón fresco.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Maki California</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/sushi_atun.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Nigiri de Atún</h3>
+                            <span class="precio">9€</span>
+                            <p class="descripcion">Finas lonchas de atún sobre bolas de arroz.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Temaki de Atún</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/sushi_mar.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Gunkan de Erizo de Mar</h3>
+                            <span class="precio">15€</span>
+                            <p class="descripcion">Pequeños barquitos de sushi rellenos de erizo de mar.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="gyozas" class="menu-section">
+        
+        
+
+          <section id="gyozas" class="menu-section">
             <h2 class="mb-4">Gyozas</h2>
-            <!-- Contenido de Gyozas -->
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Gyozas de Cerdo</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/gyozas_cerdo.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Gyozas de Cerdo</h3>
+                            <span class="precio">8€</span>
+                            <p class="descripcion" data-translate="gyozas_cerdo_desc">Deliciosas gyozas rellenas de cerdo.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Gyozas de Pollo</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/gyozas_pollo.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Gyozas de Pollo</h3>
+                            <span class="precio">7€</span>
+                            <p class="descripcion" data-translate="gyozas_pollo_desc">Sabrosas gyozas rellenas de pollo.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Gyozas Vegetarianas</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/gyozas_vegetarianas.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Gyozas Vegetarianas</h3>
+                            <span class="precio">9€</span>
+                            <p class="descripcion" data-translate="gyozas_vegetarianas_desc">Deliciosas gyozas vegetarianas rellenas de verduras.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="combos" class="menu-section">
             <h2 class="mb-4">Combos</h2>
-            <!-- Contenido de Combos -->
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Combo Clásico</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/combo_normal.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Combo Clásico</h3>
+                            <span class="precio">16€</span>
+                            <p class="descripcion">Una combinación perfecta de platos tradicionales japoneses.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Combo Premium</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/combo_premium.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Combo Premium</h3>
+                            <span class="precio">21€</span>
+                            <p class="descripcion">Una experiencia gastronómica de lujo con los mejores ingredientes y presentaciones.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Combo Vegano</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/combo_vegano.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Combo Vegano</h3>
+                            <span class="precio">15€</span>
+                            <p class="descripcion">Una selección deliciosa y saludable de platos veganos japoneses.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        
 
         <section id="bebidas" class="menu-section">
             <h2 class="mb-4">Bebidas</h2>
-            <!-- Contenido de Bebidas -->
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Sake Tradicional</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/sake_tradicional.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Sake Tradicional</h3>
+                            <span class="precio">14€</span>
+                            <p class="descripcion">Una selección de sake de alta calidad para acompañar tu comida.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Cerveza Japonesa</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/cerveza_japonesa.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Cerveza Japonesa</h3>
+                            <span class="precio">3€</span>
+                            <p class="descripcion">Refrescante cerveza japonesa, perfecta para disfrutar en cualquier momento.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Té Verde</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/te_verde.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Té Verde</h3>
+                            <span class="precio">1€</span>
+                            <p class="descripcion">Té verde japonés, conocido por sus propiedades saludables y su sabor único.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+        
 
-        <section id="postre" class="postre">
-            <h2 class="mb-4">Postre</h2>
-            <!-- Contenido de Postre -->
+        <section id="postre" class="menu-section">
+            <h2 class="mb-4">Postres</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Mochi de Matcha</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/mochis.jpg   ')"></div>
+                        <div class="contenido-plato">
+                            <h3>Mochi de Matcha</h3>
+                            <span class="precio">8€</span>
+                            <p class="descripcion">Deliciosos bocados de mochi de matcha.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Tempura de Helado</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/tempura_helado.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Tempura de Helado</h3>
+                            <span class="precio">10€</span>
+                            <p class="descripcion">Helado envuelto en masa crujiente y frito.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <div class="menu-item">Dorayaki de Chocolate</div>
+                    <div class="tarjeta-plato">
+                        <div class="imagen-plato" style="background-image: url('assets/dorayaki_chocolate.jpg')"></div>
+                        <div class="contenido-plato">
+                            <h3>Dorayaki de Chocolate</h3>
+                            <span class="precio">7€</span>
+                            <p class="descripcion">Panqueques rellenos de crema de chocolate.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section id="ofertas" class="special-offers-content">
-            <h2 class="mb-4">Ofertas Especiales</h2>
-            <!-- Sección de Ofertas Especiales con texto animado -->
-            <p>¡Oferta especial los fines de semana y festivos! <br>Un plato gratis a elegir en pedidos superiores a 40 euros.</p>
-        </section>
+        
+        
+        
+        
+        
+        <div id="ofertas" class="ofertas-container">
+            <div class="ofertas-content">
+                <div class="ofertas-text">
+                    <div class="parrafo-container">
+                        <!--Uso de CANVAS-->
+                        <canvas width="300" height="120" id="lienzo"></canvas>
+                        
+                        <p>¡Oferta especial los fines de semana y festivos! <br>Un plato gratis a elegir en pedidos superiores a 40 euros.</p>
+                    </div>
+                </div>
+                <div class="gif-container">
+                    <img src="assets/sale.gif" alt="Gif animado">
+                </div>
+            </div>
+        </div>
     </div>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <ul class="social-media list-inline mb-0">
-                <li class="list-inline-item"><p class="mb-0">Contacto: info@onubasushi.com</p></li>
-                <li class="list-inline-item"><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
-                <li class="list-inline-item"><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
-                <li class="list-inline-item"><a href="#"><img src="assets/twitter.png" alt="Twitter"></a></li>
-            </ul>
-        </div>
-    </footer>
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+<footer class="bg-dark text-white py-4 d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-6 text-center">
+                <div class="delivery-info">
+                    <p class="mb-0">¡Entrega a domicilio gratuita los 7 días de la semana!<br>13:00-16:00 y 20:30-23:59</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="social-media list-inline mb-0 text-center text-md-right">
+                    <li class="list-inline-item"><p class="mb-0">Contacto: info@onubasushi.com</p></li>
+                    <li class="list-inline-item"><a href="#"><img src="assets/facebook.png" alt="Facebook"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="assets/instagram.png" alt="Instagram"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="assets/twitter.png" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <!--Uso de SVG-->
+            <div id="svg">
+                <?xml version="1.0"?>
+                <svg
+                    width="40"
+                    height="20"
+                    viewBox="0 0 120 120"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle id="circle" cx="60" cy="60" r="50" fill="white">
+                        <animate
+                            attributeType="XML"
+                            attributeName="cx"
+                            values="10; 110; 10"
+                            keyTimes="0; 0.5; 1"
+                            dur="2s"
+                            repeatCount="indefinite" />
+                    </circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>
