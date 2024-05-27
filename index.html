@@ -6,6 +6,7 @@
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <title>ONUBA SUSHI - Restaurante de comida japonesa</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animate.css">
 
@@ -83,11 +84,19 @@
                 </div>
             </div>
         </div>
+        
     </header>
+
+    <button id="open-reserva" class="reserva-button">Reservar</button>
+
+    <style>
+        
+      </style>
     
 </head>
 <body>
     <script src="animate.js"></script>
+    <script src="script.js"></script>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,7 +124,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link special-offers" href="#ofertas">Ofertas Especiales</a>
-                    <!--</li>
+                    </li>
+                    
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
                     </li>-->
@@ -124,10 +135,19 @@
         </div>
     </nav>
 
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Bienvenido OnubaSushi</h1>
+            <h3>Hogar de la comida asiática</h3>
+            <a href="#sopas">Ver Menú</a>    
+        </div>
+    </section>
+    
+
     <div class="container py-5">
     
         <section id="sopas" class="menu-section">
-            <h2 class="mb-4">Sopas y Ramen</h2>
+            <h2 class="headline mb-4">Sopas y Ramen</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="tarjeta-plato">
@@ -163,7 +183,7 @@
         </section>
 
         <section id="sushi" class="menu-section">
-            <h2 class="mb-4">Sushi</h2>
+            <h2 class="headline mb-4">Sushi</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="tarjeta-plato">
@@ -201,7 +221,7 @@
         
 
           <section id="gyozas" class="menu-section">
-            <h2 class="mb-4">Gyozas</h2>
+            <h2 class="headline mb-4">Gyozas</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="tarjeta-plato">
@@ -237,7 +257,7 @@
         </section>
 
         <section id="combos" class="menu-section">
-            <h2 class="mb-4">Combos</h2>
+            <h2 class="headline mb-4">Combos</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="tarjeta-plato">
@@ -274,7 +294,7 @@
         
 
         <section id="bebidas" class="menu-section">
-            <h2 class="mb-4">Bebidas</h2>
+            <h2 class="headline mb-4">Bebidas</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="tarjeta-plato">
@@ -311,7 +331,7 @@
         
 
         <section id="postre" class="menu-section">
-            <h2 class="mb-4">Postres</h2>
+            <h2 class="headline mb-4">Postres</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="tarjeta-plato">
@@ -345,9 +365,21 @@
                 </div>
             </div>
         </section>
-        
-        
-        
+
+        <div class="videoImageGallery"> 
+                     
+            <div class="master">
+                <h2 class="headline mb-4">Elaboración artesana</h2>
+                <video id="video" src="assets/video.mp4" autoplay loop muted></video>
+                <img id="image" src="assets/default1.jpg" style="display: none;">
+            </div>                    
+        </div> 
+        <div class="thumbnails">    
+            <img src="assets/default1.jpg">        
+            <img class="active" src="assets/default2.jpg">  
+            <img src="assets/default3.jpg">  
+            <img src="assets/default4.jpg">  
+        </div>
         
         
         <div id="ofertas" class="ofertas-container">
@@ -369,9 +401,53 @@
 
     
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div id="reservaModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="reservaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="reservaModalLabel">Formulario de Reserva OnubaSushi</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="" method="POST">
+                <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo Electrónico:</label>
+                  <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="date">Fecha de Reserva:</label>
+                  <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="time">Hora de Reserva:</label>
+                  <input type="time" id="time" name="time" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="people">Número de Personas:</label>
+                  <input type="number" id="people" name="people" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 <footer class="bg-dark text-white py-4 d-flex align-items-center">
     <div class="container">
