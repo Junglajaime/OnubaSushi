@@ -529,3 +529,7 @@ span {
   width: 100%; /* Mostrar todo el texto */
 }
 
+.map{
+  border-radius: 40%;
+}
+

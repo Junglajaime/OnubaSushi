@@ -18,7 +18,6 @@ $(document).ready(function() {
 );
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
   const headlines = document.querySelectorAll('.headline');
   
@@ -39,5 +38,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   headlines.forEach(headline => {
       observer.observe(headline);
+  });
+});
+
+$(document).ready(function() {
+  $(".thumbnails img").on("click", function() {
+      var newSrc = $(this).attr("src");
+      if (!$("#video").prop("paused")) {
+          $("#video").get(0).pause();
+          $("#video").hide();
+          $("#image").attr("src", newSrc).show();
+      } else {
+          $("#image").attr("src", newSrc);
+      }
   });
 });

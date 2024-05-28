@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #36caaa;
+            font-style: italic;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #2f2f2f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        .btn-primary {
+            background-color: #36caaa;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #2dab8f;
+        }
+        .form-control {
+            background-color: #525252;
+            border: 1px solid #7a7a7a;
+            color: #ffffff;
+        }
+        .form-control:focus {
+            background-color: #ffffff;
+            color: #525252;
+            border-color: #1e00ff;
+        }
+        .form-group label {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Formulario de Reserva OnubaSushi</h2>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Fecha de Reserva:</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Hora de Reserva:</label>
+                <input type="time" id="time" name="time" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="people">Número de Personas:</label>
+                <input type="number" id="people" name="people" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
